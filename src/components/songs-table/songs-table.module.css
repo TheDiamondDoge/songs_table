@@ -1,21 +1,41 @@
-.table tr:nth-child(even) td {
-    background-color: #e3e3e3;
-}
-
 .table {
     border-spacing: 0;
     border-collapse: collapse;
+    border: #e3e3e3 2px solid;
+}
+
+.table td, .table th {
+    padding: 5px;
+}
+
+.thead {
+    border: #e3e3e3 2px solid;
+}
+
+.header {
+    font-weight: normal;
+    color: #9d9d9d;
+    text-align: left;
 }
 
 .id_column {
     width: 40px;
-
+    text-align: center !important;
 }
 
 .song_column {
     width: 200px;
 }
 
-.picked::before {
-    content: "$";
+.observe_icon {
+    vertical-align: text-bottom;
+    float: right;
+}
+
+.table tr:nth-child(even) td {
+    background-color: #e3e3e3;
+}
+
+tr:hover {
+    cursor: pointer;
 }

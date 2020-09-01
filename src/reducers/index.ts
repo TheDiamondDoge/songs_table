@@ -1,5 +1,5 @@
-import {combineReducers} from "redux";
-import songs from "./songs";
+import {combineReducers} from 'redux';
+import songs from './songs';
 
 export default combineReducers({
     songsTable: songs
