@@ -1,4 +1,4 @@
-import React, {FunctionComponent, memo, useCallback} from 'react';
+import React, {FC, memo, useCallback} from 'react';
 import styles from '../../songs-table.module.css';
 import ObservingIcon from '../../../observing-icon/observing-icon';
 import {Song} from '../../../../interfaces';
@@ -6,14 +6,14 @@ import {Song} from '../../../../interfaces';
 interface SongRowProps {
     song: Song,
     isObserving?: boolean,
-    onClick?: (id: number) => void
+    onClick: (id: number) => void
 }
 
-const SongRow: FunctionComponent<SongRowProps> = memo(function SongRow({
+const SongRow: FC<SongRowProps> = memo(({
     song,
     isObserving = false,
-    onClick = () => {}
-}) {
+    onClick
+}) => {
     const onRowClick = useCallback(() =>
         onClick(song.id),
         [onClick, song.id]

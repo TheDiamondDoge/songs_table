@@ -20,7 +20,7 @@
 
 .id_column {
     width: 40px;
-    text-align: center !important;
+    text-align: center;
 }
 
 .song_column {
@@ -36,6 +36,6 @@
     background-color: #e3e3e3;
 }
 
-tr:hover {
+tbody tr:hover {
     cursor: pointer;
 }

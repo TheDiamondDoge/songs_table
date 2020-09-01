@@ -15,9 +15,7 @@ interface Action {
     songs?: Song[]
 }
 
-export default (state: SongsTable, action: Action) => {
-    if (state === undefined) return initState;
-
+export default (state: SongsTable = initState, action: Action) => {
     switch (action.type) {
         case SONGS_LOAD: {
             return {
